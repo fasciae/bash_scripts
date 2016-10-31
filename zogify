@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#zogify - a script to quickly convert a batch of files to the sampling rate of zog or vogel
+echo "zogifying commences"
+
+if [ "$1" = "-z" ]
+then
+	mkdir zogified
+	for file in *.wav; do sox $file -r 48000 zogified/$(basename $file) -V
+done
+echo "consider these files zogified"
+fi
+
+if [ "$1" = "-v" ]
+then
+	mkdir vogelized
+	for file in *.wav; do sox $file -r 44100 vogelized/$(basename $file) -V
+done
+echo "consider these files vogelized"
+fi
+
+echo "zogification complete"
