@@ -1,0 +1,2 @@
+#!/bin/bash
+qt-mountainview --raw=raw.mda --filt=filt.mda --pre=pre.mda --geom=geom.csv --cluster_metrics=cluster_metrics.json --firings=firings.mda --samplerate=30000

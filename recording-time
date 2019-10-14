@@ -1,0 +1,5 @@
+#!/bin/bash
+screen -d -m ssh pi@192.168.1.5 python rig_state_machine.py
+screen -d -m open-ephys
+read -p "Press [Enter] key to launch rig control gui..."
+python /home/gentnerlab0/code/glab_oe_rig_tools/acute_rig_control_gui.py
