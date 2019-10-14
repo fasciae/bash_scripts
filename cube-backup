@@ -1,0 +1,16 @@
+#!/bin/bash
+
+err_report() {
+        echo "FILE NOT COPIED SUCCESSFULLY"
+}
+
+trap 'err_report' ERR
+
+echo 'copying '$1' to cube'
+
+VAR=$1
+
+VAR=${VAR%/};
+
+rsync -r -P $VAR /mnt/cube/nyoni-raw/
+###echo 'rsync -r -P '$VAR' mnt/cube/nyoni-raw/'
