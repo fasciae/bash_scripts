@@ -1,2 +1,2 @@
 # bash_scripts
-tricky tricks for the home
+Bash scripts to automate common tasks in our lab.
